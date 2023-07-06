@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face{
+    font-family: 'Gothic A1';
+    src: url(web_event\fonts\GothicA1.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: 'Fjalla One';
+    src: url(web_event\fonts\FjallaOne.ttf) format('truetype');
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -12,13 +22,12 @@ body{
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(162deg, #000 0%, rgba(130, 6, 160, 0.88) 100%);
-    font-family: Fjalla One;
+    font-family: 'Fjalla One';
 }
 
 .Logo_block{
     margin-top: 6.12vh;
-    margin-left: 37.44vw;
-    align-self: flex-start;
+    align-self: center;
     position: relative;
     width: 28.37vw;
     height: 10vh;
@@ -28,14 +37,13 @@ body{
     justify-content: center;
     overflow: visible;
     padding-top: -2vh;
+    position: relative;
 }
 
 .Logo_back{
-    font-family: 'Fjalla One';
     font-style: normal;
     font-weight: 400;
     font-size: min(14.883720930232558vw, 6.866952789699571vh);
-    line-height: 80px;
     background: radial-gradient(60.81% 220.93% at 50% 16.28%, #FFFFFF 5.2%, #FFFFFF 5.21%, rgba(189, 0, 255, 0.44) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -43,6 +51,19 @@ body{
     text-fill-color: transparent;
     opacity: 0.5;
     text-shadow: 0px 0px 2px #686868;
+    position: absolute;
+    z-index: 1;
+}
+.Logo_front{
+    font-size: min(3.255813953488372vw, 1.502145922746781vh);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.932292) 0.01%, rgba(190, 89, 225, 0.76) 91.67%, rgba(255, 255, 255, 0.935818) 99.99%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: absolute;
+    z-index: 2;
+    margin-left: 5em;
 }
 
 .Menu_point{
@@ -50,12 +71,58 @@ body{
     color: #FFF;
     font-size: min(3.488372093023256vw, 1.6094420600858368vh);
     width: 30%;
+    transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
+    border-radius: min(1.8604651162790697vw, 0.8583690987124464vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-
+.Menu_point:hover{
+    background-color: #c2e242;
+    color: #189B7C;
+}
 .Sub_menu{
     display: flex;
     flex-direction: row;
     width: 100vw;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.Countdown{
+    width: 87.90697674418605vw;
+    height: 10.72961373390558vh;
+    margin-top: 5.472103004291846vh;
+    border-radius: min(1.8604651162790697vw, 0.8583690987124464vh);
+    background: rgba(24, 155, 124, 0.70);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Countdown > h1{
+    width: 48.837209302325576vw;
+    height: 4.07725321888412vh;
+    color: #ffffff;
+    font-size: min(7.441860465116279vw, 3.4334763948497855vh);
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.Countdown > div{
+    width: 83.72093023255815vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Countdown > div > p{
+    color: #FFF;
+    font-size: min(3.7209302325581395vw, 1.7167381974248928vh);
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
 }
